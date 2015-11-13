@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Examples</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <style type="text/css">
+    body,
+    input,
+    button,
+    textarea,
+    select {
+        font-size: 12px;
+        font-family: "Lantinghei SC", "Open Sans", Arial, "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", "STHeiti", "WenQuanYi Micro Hei", SimSun, sans-serif;
+    }
+
+    .news {
+        margin: 0 auto;
+        width: 700px;
+        height: 2400px;
+        background-color: red;
+    }
+
+    .ui-dialog-mask {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1000;
+        background-color: #000;
+        opacity: .6;
+        -moz-opacity: .6;
+        filter:alpha(opacity=60);
+    }
+
+    .ui-dialog {
+        padding: 50px 25px 65px;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        z-index: 1001;
+        box-sizing: border-box;
+        width: 580px;
+        margin: -160px 0 0 -290px;
+        border-radius: 10px;
+        background-color: #fff;
+    }
+
+    .ui-dialog-cnt {
+        text-align: center;
+        font-size: 14px;
+        color: #2a2a2a;
+    }
+
+    .ui-dialog-close {
+        color: #bbbbbb;
+        cursor: pointer;
+    }
+
+    .ui-dialog-close::after {
+        content: '×';
+        position: absolute;
+        top: 5px;
+        right: 20px;
+        font-size: 22px;
+        font-weight: 700;
+    }
+
+    .ui-dialog .ui-dialog-icon-info,
+    .ui-dialog .ui-dialog-icon-warn {
+        display: inline-block;
+        width: 60px;
+        height: 60px;
+        margin: 0 0 20px 0;
+        background: url(http://i.gtimg.cn/vipstyle/vipportal/v4/img/component/sprites_dialog.png) no-repeat;
+    }
+
+    .ui-dialog .ui-dialog-icon-info {
+        background-position: 0 -67px;
+    }
+
+    .ui-dialog .ui-dialog-icon-warn {
+        background-position: 0 0px;
+    }
+
+    .ui-dialog .ui-dialog-content {
+        color: #636363;
+        line-height: 1.5;
+    }
+
+    .ui-dialog .ui-dialog-content-in {
+        max-height: 400px;
+        overflow-y: auto;
+    }
+
+    .ui-dialog .ui-dialog-ft {
+        margin: 34px 0 0;
+    }
+
+    .ui-btn-adapt {
+        display: inline-block;
+        padding: 0;
+        padding-left: 20px;
+        border: none;
+        cursor: pointer;
+    }
+
+    .ui-btn-adapt,
+    .ui-btn-adapt span {
+        background: url(http://i.gtimg.cn/vipstyle/vipportal/v4/img/component/sprites_dialog.png) no-repeat;
+    }
+
+    .ui-btn-adapt span {
+        display: inline-block;
+        padding-right: 20px;
+        min-width: 80px;
+        line-height: 40px;
+        height: 40px;
+        cursor: pointer;
+    }
+
+    .ui-btn-adapt-basic-s {
+        color: #986b0d;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 700;
+        background-position: -210px -100px;
+    }
+
+    .ui-btn-adapt-basic-s:hover {
+        background-position: -210px -150px;
+    }
+
+    .ui-btn-adapt-basic-s span {
+        background-position: right -300px;
+    }
+
+    .ui-btn-adapt-basic-s:hover span {
+        background-position: right -350px;
+    }
+
+    .ui-btn-adapt-basic-c {
+        color: #e8b600;
+        text-align: center;
+        margin-left: 75px;
+        font-size: 16px;
+        font-weight: 700;
+        background-position: -210px 0;
+    }
+
+    .ui-btn-adapt-basic-c:hover {
+        background-position: -210px -150px;
+    }
+
+    .ui-btn-adapt-basic-c span {
+        background-position: right -200px;
+    }
+
+    .ui-btn-adapt-basic-c:hover span {
+        background-position: right -350px;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <div class="news"></div>
+    </div>
+    <div class="ui-dialog-mask"></div>
+    <section class="ui-dialog">
+        <div class="ui-dialog-cnt">
+            <span class="ui-dialog-close"></span>
+            <div class="ui-dialog-bd">
+                <span class="ui-dialog-icon-info"></span>
+                <h3 class="ui-dialog-title">
+                    签到成功，恭喜您获得任务成长值!
+                </h3>
+                <div class="ui-dialog-content">
+                    <div class="ui-dialog-content-in"></div>
+                </div>
+                <div class="ui-dialog-ft">
+                    <span class="ui-btn-adapt ui-btn-adapt-basic-s">
+                        <span>确定</span>
+                    </span>
+                    <span class="ui-btn-adapt ui-btn-adapt-basic-c">
+                        <span>取消</span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
