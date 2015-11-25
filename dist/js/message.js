@@ -1,16 +1,16 @@
 /*!
- * jMessage Javascript Library
+ * Message Javascript Library
  * radishj - v1.0.0 (2015-11-25 14:03:58)
  * https://github.com/RadishJ | Released under MIT license
  */
-var jMessage = function () {
+var Message = function () {
     "use strict";
 }
 /**
  * 遮罩层是否存在
  * @return {[type]} [description]
  */
-jMessage.prototype.existMask = function () {
+Message.prototype.existMask = function () {
     var _mask = document.getElementsByClassName('ui-dialog-mask');
     if( !!_mask && !_mask.length ) {
         return false;
@@ -22,7 +22,7 @@ jMessage.prototype.existMask = function () {
  * 显示遮罩层
  * @return {[type]} [description]
  */
-jMessage.prototype.showMask = function () {
+Message.prototype.showMask = function () {
     var _self = this;
     if( !_self.existMask() ) {
         var _mask = document.createElement('div');
@@ -37,7 +37,7 @@ jMessage.prototype.showMask = function () {
  * 窗体是否存在
  * @return {[type]}
  */
-jMessage.prototype.existAlertCnt = function () {
+Message.prototype.existAlertCnt = function () {
     var _dialog = document.getElementsByClassName('ui-dialog');
     if( !!_dialog && !_dialog.length ) {
         return false;
@@ -50,7 +50,7 @@ jMessage.prototype.existAlertCnt = function () {
  * @param  {[type]} msg 消息
  * @return {[type]}     [description]
  */
-jMessage.prototype.showAlertCnt = function (msg) {
+Message.prototype.showAlertCnt = function (msg) {
     var _self = this;
     if( !_self.existAlertCnt() ) {
         // <section class="ui-dialog">
@@ -131,7 +131,7 @@ jMessage.prototype.showAlertCnt = function (msg) {
  * 隐藏窗体
  * @return {[type]} [description]
  */
-jMessage.prototype.hide = function () {
+Message.prototype.hide = function () {
     var _self = this;
     if( _self.existAlertCnt() && _self.existMask()) {
         document.getElementsByClassName('ui-dialog')[0].style.display = "none";
@@ -143,7 +143,7 @@ jMessage.prototype.hide = function () {
  * @param  {[type]} msg [description]
  * @return {[type]}     [description]
  */
-jMessage.prototype.alert = function (msg) {
+Message.prototype.alert = function (msg) {
     var _self = this;
 
     _self.showMask();
