@@ -1,13 +1,16 @@
 /*!
- * Alert Javascript Library
+ * jMessage Javascript Library
  * radishj - v1.0.0 (2015-11-25 14:03:58)
  * https://github.com/RadishJ | Released under MIT license
  */
-var Message = function () {
+var jMessage = function () {
     "use strict";
 }
-
-Message.prototype.existMask = function () {
+/**
+ * 遮罩层是否存在
+ * @return {[type]} [description]
+ */
+jMessage.prototype.existMask = function () {
     var _mask = document.getElementsByClassName('ui-dialog-mask');
     if( !!_mask && !_mask.length ) {
         return false;
@@ -15,8 +18,11 @@ Message.prototype.existMask = function () {
         return true;
     }
 }
-
-Message.prototype.showMask = function () {
+/**
+ * 显示遮罩层
+ * @return {[type]} [description]
+ */
+jMessage.prototype.showMask = function () {
     var _self = this;
     if( !_self.existMask() ) {
         var _mask = document.createElement('div');
@@ -27,8 +33,11 @@ Message.prototype.showMask = function () {
         _mask[0].style.display = "block";
     }
 }
-
-Message.prototype.existAlertCnt = function () {
+/**
+ * 窗体是否存在
+ * @return {[type]}
+ */
+jMessage.prototype.existAlertCnt = function () {
     var _dialog = document.getElementsByClassName('ui-dialog');
     if( !!_dialog && !_dialog.length ) {
         return false;
@@ -36,7 +45,12 @@ Message.prototype.existAlertCnt = function () {
         return true;
     }
 }
-Message.prototype.showAlertCnt = function (msg) {
+/**
+ * 显示窗体
+ * @param  {[type]} msg 消息
+ * @return {[type]}     [description]
+ */
+jMessage.prototype.showAlertCnt = function (msg) {
     var _self = this;
     if( !_self.existAlertCnt() ) {
         // <section class="ui-dialog">
@@ -113,14 +127,23 @@ Message.prototype.showAlertCnt = function (msg) {
         _dialog[0].style.display = "block";
     }
 }
-Message.prototype.hide = function () {
+/**
+ * 隐藏窗体
+ * @return {[type]} [description]
+ */
+jMessage.prototype.hide = function () {
     var _self = this;
     if( _self.existAlertCnt() && _self.existMask()) {
         document.getElementsByClassName('ui-dialog')[0].style.display = "none";
         document.getElementsByClassName('ui-dialog-mask')[0].style.display = "none";
     }
 }
-Message.prototype.alert = function (msg) {
+/**
+ * 弹出窗体方法
+ * @param  {[type]} msg [description]
+ * @return {[type]}     [description]
+ */
+jMessage.prototype.alert = function (msg) {
     var _self = this;
 
     _self.showMask();

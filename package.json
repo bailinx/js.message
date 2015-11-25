@@ -1,0 +1,11 @@
+{
+  "name": "jquery.airpointselector",
+  "version": "1.0.1",
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-contrib-clean": "latest",
+    "grunt-contrib-copy" : "latest",
+    "grunt-contrib-cssmin": "latest",
+    "grunt-contrib-uglify": "latest"
+  }
+}

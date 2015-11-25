@@ -1,0 +1,26 @@
+{
+  "name": "jMessage",
+  "description": "a javascript plugin for alert an confirm",
+  "main": [
+    "./dist/js/jMessage.js",
+    "./dist/image/jMessage.css"
+  ],
+  "authors": [
+    "radishj <423261989@qq.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "alert",
+    "confirm"
+  ],
+  "homepage": "https://github.com/RadishJ/javascript.alert",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+  }
+}
