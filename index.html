@@ -8,20 +8,24 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
     <style type="text/css">
+    * {
+        padding: 0;
+        margin: 0;
+    }
     body,
     input,
     button,
     textarea,
     select {
         font-size: 12px;
-        font-family: "Lantinghei SC", "Open Sans", Arial, "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", "STHeiti", "WenQuanYi Micro Hei", SimSun, sans-serif;
+        font-family: "Lantinghei SC", "Open Sans", Arial, "Hiragino Sans GB", "Microsoft YaHei", "STHeiti", "WenQuanYi Micro Hei", SimSun, sans-serif;
     }
 
     .news {
         margin: 0 auto;
         width: 700px;
         height: 2400px;
-        background-color: red;
+        background-color: #009a61;
     }
 
     .ui-dialog-mask {
@@ -38,18 +42,32 @@
     }
 
     .ui-dialog {
-        padding: 50px 25px 65px;
+        padding: 3rem 2rem;
         position: fixed;
         top: 50%;
         left: 50%;
         z-index: 1001;
         box-sizing: border-box;
-        width: 580px;
-        margin: -160px 0 0 -290px;
+        width: 500px;
+        margin: -160px 0 0 -250px;
         border-radius: 10px;
         background-color: #fff;
-    }
 
+        animation:fadeIn 1s 1;
+        -webkit-animation:fadeIn 1s 1;
+        transition: all 4s ease;
+    }
+    @-webkit-keyframes fadeIn {
+        0% {
+            opacity: 0; /*初始状态 透明度为0*/
+        }
+        50% {
+            opacity: 1; /*中间状态 透明度为0*/
+        }
+        100% {
+            opacity: 1; /*结尾状态 透明度为1*/
+        }
+    }
     .ui-dialog-cnt {
         text-align: center;
         font-size: 14px;
@@ -163,14 +181,27 @@
     .ui-btn-adapt-basic-c:hover span {
         background-position: right -350px;
     }
+
+    #btnAlert {
+        width: 150px;
+        padding: 1em;
+        margin: 5em;
+        border-radius: 20px;
+        background-color: #fff;
+        display: inline-block;
+        text-align: center;
+        cursor: pointer;
+    }
     </style>
 </head>
 
 <body>
     <div class="content">
-        <div class="news"></div>
+        <div class="news">
+            <a id="btnAlert" onclick="funAlert()">Alert</a>
+        </div>
     </div>
-    <div class="ui-dialog-mask"></div>
+    <!-- <div class="ui-dialog-mask"></div>
     <section class="ui-dialog">
         <div class="ui-dialog-cnt">
             <span class="ui-dialog-close"></span>
@@ -191,8 +222,18 @@
                     </span>
                 </div>
             </div>
-        </div>
+        </div> -->
     </section>
+    <script type="text/javascript" src="js/jquery.alert.js"></script>
+    <script type="text/javascript">
+        window.alert = function(msg) {
+            var message = new Message();
+            message.alert(msg);
+        }
+        function funAlert() {
+            alert("操作已成功");
+        }
+    </script>
 </body>
 
 </html>
