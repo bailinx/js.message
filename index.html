@@ -28,7 +28,7 @@
         background-color: #009a61;
     }
 
-    #btnAlert {
+    .btn {
         width: 150px;
         padding: 1em;
         margin: 5em;
@@ -45,7 +45,8 @@
 <body>
     <div class="content">
         <div class="news">
-            <a id="btnAlert" onclick="funAlert()">Alert</a>
+            <a id="btnAlert" class="btn" onclick="funAlert()">Alert</a>
+            <a id="btnConfirm" class="btn" onclick="funConfirm()">Confirm</a>
         </div>
     </div>
     <!-- <div class="ui-dialog-mask"></div>
@@ -76,9 +77,21 @@
         window.alert = function(msg) {
             var message = new Message();
             message.alert(msg);
+            /*message.alert(msg, function() {
+                console.log('callback! - ' + (new Date()).valueOf());
+            });*/
+        }
+        window.confirm = function(msg, callBack) {
+            var message = new Message();
+            message.confirm(msg, callBack);
         }
         function funAlert() {
             alert("操作已成功");
+        }
+        function funConfirm() {
+            confirm("操作已成功", function() {
+                console.log('callback! - ' + (new Date()).valueOf());
+            });
         }
     </script>
 </body>
