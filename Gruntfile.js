@@ -54,6 +54,20 @@ module.exports = function(grunt) {
                     extDot: 'last'
                 }]
             }
+        },
+        watch: {
+            all: {
+                files: ["js/*.js", "css/*.css"],
+                tasks: ['clean', 'copy', 'cssmin', 'uglify']
+            }
+            /*scripts: {
+                files: "js/*.js",
+                tasks: ['uglify']
+            },
+            css: {
+                files: "css/*.css",
+                tasks: ['cssmin']
+            }*/
         }
     });
 
@@ -61,6 +75,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-watch');
 
-    grunt.registerTask('default', ['clean', 'copy', 'cssmin', 'uglify']);
+    grunt.registerTask('default', ['clean', 'copy', 'cssmin', 'uglify', 'watch']);
 };

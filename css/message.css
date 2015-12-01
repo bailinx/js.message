@@ -60,7 +60,7 @@
     font-weight: 700;
 }
 
-.ui-dialog .ui-dialog-icon-info,
+.ui-dialog .ui-dialog-icon-success,
 .ui-dialog .ui-dialog-icon-warn {
     display: inline-block;
     width: 60px;
@@ -69,7 +69,7 @@
     background: url(../image/dialog.png) no-repeat;
 }
 
-.ui-dialog .ui-dialog-icon-info {
+.ui-dialog .ui-dialog-icon-success {
     background-position: 0 -67px;
 }
 
