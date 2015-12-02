@@ -1,6 +1,6 @@
 /*!
  * Message Javascript Library
- * radishj - v1.0.0 (2015-11-25 14:03:58)
+ * radishj - v1.0.2 (2015-12-02 14:03:58)
  * https://github.com/RadishJ | Released under MIT license
  */
 var Message = function() {
